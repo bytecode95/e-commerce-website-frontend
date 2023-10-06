@@ -1,0 +1,22 @@
+body{
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensure the body stretches to at least the viewport height */
+    margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
