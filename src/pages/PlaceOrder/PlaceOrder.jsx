@@ -1,5 +1,4 @@
 import Card from 'react-bootstrap/Card';
-
 import Button from "react-bootstrap/Button";
 import Container from 'react-bootstrap/Container';
 import Avatar from "@mui/material/Avatar";
@@ -9,7 +8,7 @@ import instance from "../../service/AxiosOrder.js";
 import {useAuth} from "../../data/useAuth.jsx";
 import Alert from "@mui/material/Alert";
 import {useNavigate} from "react-router-dom";
-
+import Base_Url from '../../common/BaseURL.jsx'
 
 
 export default function PalceOrder() {
@@ -141,7 +140,7 @@ export default function PalceOrder() {
                             alignItems: 'center',
                             justifyContent: 'space-between'
                         }}>
-                            <Avatar alt="img" src={`http://192.168.8.187:4000/uploads/${val.pro_image}`}/>
+                            <Avatar alt="img" src={`${Base_Url}${val.pro_image}`}/>
                             <Typography>{`${val.pro_name}`}</Typography>
                             <Typography>{`${val.nProduct}`}</Typography>
                         </div>

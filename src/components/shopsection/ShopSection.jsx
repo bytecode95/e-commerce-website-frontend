@@ -7,7 +7,7 @@ import { useEffect, useState} from "react";
 import Container from "@mui/material/Container";
 import instance from '../../service/AxiosOrder.js'
 import {Button} from "@mui/material";
-import Rating from "@mui/material/Rating";
+import Base_Url from '../../common/BaseURL.jsx'
 
 
 
@@ -44,7 +44,7 @@ export default function ShopSection({addtoCart}) {
                 {product.map((val, index) => (
                         <Card  style={{cursor:'pointer'}} key={index} sx={{ width: 300, margin: 2 }}>
                             <div onClick={()=>{navigate(`/productdetails/${val.id}`)}}>
-                                <img src={`http://192.168.8.187:4000/uploads/${val.pro_image}`} style={{borderRadius:'5px 5px', boxShadow:'5px', display:'flex', margin:'auto', padding:'5px'}} className={'product'} alt="img" />
+                                <img src={`${Base_Url}${val.pro_image}`} style={{borderRadius:'5px 5px', boxShadow:'5px', display:'flex', margin:'auto', padding:'5px'}} className={'product'} alt="img" />
                                 <Typography style={{marginTop:'2px', fontSize:'18px', fontWeight:'bold', paddingLeft:'10px'}} >
                                     {val.pro_name}
                                 </Typography>

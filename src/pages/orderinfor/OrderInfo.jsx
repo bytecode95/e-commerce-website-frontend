@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import instance from "../../service/AxiosOrder.js";
 
@@ -124,6 +124,7 @@ export default function OrderDetails() {
                 <Button   className="d-block m-auto w-25" variant="primary" type={'submit'}>
                     Submit
                 </Button>
+                <h5 className="text-center mt-4 text-dark">If you have already have an account please go to <Link className="text-decoration-none" to={'/placeorder'}>this</Link> page</h5>
             </Form>
         </Container>
 

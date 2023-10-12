@@ -9,7 +9,7 @@ import instance from "../../service/AxiosOrder.js";
 import {Form} from "react-bootstrap";
 import Rating from "@mui/material/Rating";
 import Alert from "@mui/material/Alert";
-
+import Base_Url from '../../common/BaseURL.jsx'
 
 export default function ProductDetails({updateCart}) {
 
@@ -95,7 +95,7 @@ export default function ProductDetails({updateCart}) {
 
             <Container>
                 <Card className="d-flex flex-row flex-sm-wrap m-auto border-1 p-3 w-50 mt-3 mb-5 border-1 align-items-center ">
-                    <Card.Img style={{maxWidth: '300px', maxHeight:'300px'}} src={`http://192.168.8.187:4000/uploads/${item.pro_image}`} alt={'productimage'}/>
+                    <Card.Img style={{maxWidth: '300px', maxHeight:'300px'}} src={`${Base_Url}${item.pro_image}`} alt={'productimage'}/>
                     <Card.Body>
                         <Card.Title className="fs-3">{item.pro_name}</Card.Title>
                         <Rating name="read-only" value={finalRating} readOnly />

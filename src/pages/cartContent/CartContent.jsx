@@ -10,6 +10,7 @@ import {useNavigate} from "react-router-dom";
 import LockIcon from '@mui/icons-material/Lock';
 import {useEffect, useState} from "react";
 import Button from 'react-bootstrap/Button';
+import Base_Url from '../../common/BaseURL.jsx'
 
 export default function CartContent({cartItems, setCartItems, adding, removing}) {
     //console.log(cartItems)
@@ -58,7 +59,7 @@ export default function CartContent({cartItems, setCartItems, adding, removing})
                                     <Avatar
                                         style={{width:'70px', height:'70px'}}
                                         alt={'image'}
-                                        src={`http://192.168.8.187:4000/uploads/${val.pro_image}`}
+                                        src={`${Base_Url}${val.pro_image}`}
                                     />
                                 </ListItemAvatar>
                                 <ListItemText style={{marginLeft:'20px',width:'100px'}}  primary={`${val.pro_name}`} />
