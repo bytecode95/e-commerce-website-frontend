@@ -2,6 +2,7 @@ import CartContent from '../pages/cartContent/CartContent.jsx'
 import LockIcon from "@mui/icons-material/Lock.js";
 import OrderDetails from "../pages/orderinfor/OrderInfo.jsx";
 
+//this is for sidebar
 const routes = [
     {
         name:'View Cart',
