@@ -22,12 +22,13 @@ function App() {
             return <Route exact path={route.path} element={route.component} key={route.key}/>;
         });
 
+    //add color to all pages
     useLayoutEffect(() => {
         document.body.style.backgroundColor = '#f7f7f7'
     });
 
 
-    //user login and logout
+    //cartItems setting and warning for shopsection after added item
     const [cartItems, setCartItems] = useState(cartFromlocalStorage);   //cart items state declare
     const [warning, setWarning] = useState(false);
     // const [view, setView] = useState(false)
@@ -38,7 +39,7 @@ function App() {
 
     }, [cartItems]);
 
-    //adding removing and quantity calculation in cart
+    //adding removing and quantity calculation in cart. this is only for shop section only one item can be added
     const addtoCart = (product) => {
 
         const ProductExist = cartItems.find((val) => val.id === product.id)
@@ -53,6 +54,7 @@ function App() {
         }
     }
 
+    //this is for product detail page. user can chnage quantities further
     const updateCart = (item, amount) => {
         const ProductExist = cartItems.find((val) => val.id === item.id)
         if (ProductExist) {
@@ -64,6 +66,7 @@ function App() {
         }
     }
 
+    // adding and removing for cartContent page. user can further adjust quantiies
     const adding = (item) => {
         const ProductExist = cartItems.find((val) => val.id === item.id);
         if (ProductExist) {
