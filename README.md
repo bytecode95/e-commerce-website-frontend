@@ -2,7 +2,7 @@
 
 A fully responsive sample of E-Commerce Website using React js Client UI
  
-![Alt Text](src\assets\image.png)
+![Alt Text](src\assets\image.png){:width="300" height="200"}
 
 ## Features
 
